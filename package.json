@@ -2,10 +2,24 @@
   "name": "pattern-library-new",
   "version": "0.1.0",
   "private": true,
+  "husky": {
+	  "hooks": {
+		  "pre-commit": "lint-staged"
+	  }
+  },
   "dependencies": {
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
+  },
+  "lint-staged": {
+	"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+		"prettier --single-quote --write",
+		"git add"
+	]
   },
   "scripts": {
     "start": "react-scripts start",
