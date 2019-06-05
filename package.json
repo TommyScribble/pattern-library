@@ -15,7 +15,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "source-map-explorer": "^2.0.0"
+    "source-map-explorer": "^2.0.0",
+    "stylelint": "^10.0.1",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.8.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
