@@ -10,6 +10,7 @@
   "dependencies": {
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
+    "node-sass": "^4.12.0",
     "prettier": "^1.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -23,9 +24,9 @@
     ]
   },
   "scripts": {
-	"start": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-	"analyse": "source-map-explorer 'build/static/js/*.js",
+    "analyse": "source-map-explorer 'build/static/js/*.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
