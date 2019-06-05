@@ -24,7 +24,11 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --single-quote --write",
       "git add"
-    ]
+	],
+	"src/styles/**/*.scss": [
+		"stylelint --fix",
+		"git add"
+	]
   },
   "scripts": {
     "start": "react-scripts start",
