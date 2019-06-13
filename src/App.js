@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './styles/index.scss';
+import Button from './objects/Button';
+import Heading from './objects/Heading';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <body className="pattern-library">
+      <header>
+        <nav className="top-nav">
+          <Heading tagNumber={1} headingText={'This is a heading component'} />
+        </nav>
+        <ul className="side-nav" />
+
+        <Button btnText={'MY BUTTON'} />
       </header>
-    </div>
+      <main />
+
+      <footer />
+    </body>
   );
 }
 
