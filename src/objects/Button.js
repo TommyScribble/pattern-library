@@ -9,8 +9,6 @@ const defaultStyle = {
 const Button = props => {
   const { type, style, btnClass, btnText } = props;
 
-  console.log('PROPS', props);
-
   return (
     <button type={type} style={style} className={`btn ` + btnClass}>
       {btnText}
@@ -27,7 +25,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   type: propTypes.string,
-  style: propTypes.string,
+  style: propTypes.object,
   btnClass: propTypes.string,
   btnText: propTypes.string
 };
