@@ -18,7 +18,7 @@ const Button = props => {
   );
 };
 
-Button.defualtProps = {
+Button.defaultProps = {
   type: 'button',
   style: defaultStyle,
   btnClass: 'btn-primary',
