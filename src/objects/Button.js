@@ -12,7 +12,7 @@ const Button = props => {
   console.log('PROPS', props);
 
   return (
-    <button type={type} style={defaultStyle} className={`btn ` + btnClass}>
+    <button type={type} style={style} className={`btn ` + btnClass}>
       {btnText}
     </button>
   );
@@ -20,6 +20,7 @@ const Button = props => {
 
 Button.defualtProps = {
   type: 'button',
+  style: defaultStyle,
   btnClass: 'btn-primary',
   btnText: 'Please give me some text'
 };
