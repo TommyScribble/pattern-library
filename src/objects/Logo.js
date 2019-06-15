@@ -1,13 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Logo = props => {
   const { anchor, logo, altText } = props;
 
   return (
-    <a href={anchor}>
+    <Link to={anchor}>
       <img src={logo} alt={altText} />
-    </a>
+    </Link>
   );
 };
 
