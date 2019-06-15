@@ -2,9 +2,13 @@
 //	BASE
 // --------------------------------------- \\
 
+$basefont-size: 16px;
+
 body {
 	font-family: $ff-open-sans;
 	font-weight: 300;
+	font-size: $basefont-size;
+	color: $text-color;
 }
 
 h1,
@@ -15,6 +19,31 @@ h5,
 h6 {
 	font-family: $ff-archivo;
 	font-weight: 500;
+	color: $heading-color;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 1rem;
 }
 
 header,

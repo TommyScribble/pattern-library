@@ -1,7 +1,10 @@
+// Normalize
 @import-normalize;
-
-@import '02_tools/fonts', '02_tools/base', '04_components/sidebar',
-	'04_components/main-content', '04_components/footer';
+// Bulma framework
+@import '~bulma/bulma.sass';
+// Custom styles
+@import '02_tools/colors', '02_tools/fonts', '02_tools/base',
+	'04_components/sidebar', '04_components/main-content', '04_components/footer';
 
 .side-nav {
 	list-style: none;

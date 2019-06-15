@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from '../objects/Button';
 import Heading from '../objects/Heading';
-import ButtonAnchor from '../objects/ButtonAnchor';
 import SideBar from './SideBar';
 
 const Header = props => {
