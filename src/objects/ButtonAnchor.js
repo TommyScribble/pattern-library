@@ -1,11 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const ButtonAnchor = props => {
-  const { path, anchorClass, disabled, internal } = props;
-
-  console.log('internal', internal);
+  const { path, anchorClass, disabled, internal, navigation } = props;
 
   let buttonAnchor;
 
@@ -25,6 +23,17 @@ const ButtonAnchor = props => {
       >
         {props.children}
       </Link>
+    );
+  } else if (navigation) {
+    buttonAnchor = (
+      <NavLink
+        to={path}
+        className={anchorClass}
+        disabled={disabled}
+        onClick={handleClick}
+      >
+        {props.children}
+      </NavLink>
     );
   } else {
     buttonAnchor = (
@@ -46,7 +55,8 @@ ButtonAnchor.propTypes = {
   path: propTypes.string,
   anchorClass: propTypes.string,
   disabled: propTypes.bool,
-  internal: propTypes.bool
+  internal: propTypes.bool,
+  navigation: propTypes.bool
 };
 
 export default ButtonAnchor;

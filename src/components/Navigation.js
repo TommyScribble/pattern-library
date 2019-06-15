@@ -1,14 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import ButtonAnchor from '../objects/ButtonAnchor';
 
 const Navigation = props => {
   return (
     <React.Fragment>
       <li className="side-nav__item">
-        <NavLink to="/">Homepage</NavLink>
+        <ButtonAnchor
+          navigation={true}
+          path={'./'}
+          anchorClass={'side-nav__link'}
+        >
+          Homepage
+        </ButtonAnchor>
       </li>
       <li className="side-nav__item">
-        <NavLink to="/buttons">Buttons Page</NavLink>
+        <ButtonAnchor
+          navigation={true}
+          path={'/buttons'}
+          anchorClass={'side-nav__link'}
+        >
+          Buttons Page
+        </ButtonAnchor>
       </li>
     </React.Fragment>
   );

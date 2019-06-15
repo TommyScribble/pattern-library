@@ -6,7 +6,7 @@ const PageLayout = props => {
   return (
     <React.Fragment>
       <Header />
-      {props.children}
+      <main className="main-content">{props.children}</main>
       <Footer />
     </React.Fragment>
   );

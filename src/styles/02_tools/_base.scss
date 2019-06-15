@@ -1,0 +1,24 @@
+// --------------------------------------- \\
+//	BASE
+// --------------------------------------- \\
+
+body {
+	font-family: $ff-open-sans;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $ff-archivo;
+	font-weight: 500;
+}
+
+header,
+main,
+footer {
+	padding-left: 300px;
+}
