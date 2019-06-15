@@ -8,7 +8,7 @@ const SideBar = props => {
   return (
     <ul className="side-nav fixed">
       <li className="logo">
-        <Logo anchor={'/'} logo={myLogo} altText={'Pattern Library 2019'} />
+        <Logo anchor={'./'} logo={myLogo} altText={'Pattern Library 2019'} />
       </li>
       <li className="version">{versionNo}</li>
       <Navigation />

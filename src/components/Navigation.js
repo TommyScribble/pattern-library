@@ -16,10 +16,73 @@ const Navigation = props => {
       <li className="side-nav__item">
         <ButtonAnchor
           navigation={true}
-          path={'/buttons'}
+          path={'/button'}
           anchorClass={'side-nav__link'}
         >
-          Buttons Page
+          Buttons
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/text'}
+          anchorClass={'side-nav__link'}
+        >
+          Text
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/icons'}
+          anchorClass={'side-nav__link'}
+        >
+          Icons
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/progress-bar'}
+          anchorClass={'side-nav__link'}
+        >
+          Progress Bar
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/spinner'}
+          anchorClass={'side-nav__link'}
+        >
+          Spinner
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/tooltip'}
+          anchorClass={'side-nav__link'}
+        >
+          Tooltip
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/radio'}
+          anchorClass={'side-nav__link'}
+        >
+          Radio
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/checkbox'}
+          anchorClass={'side-nav__link'}
+        >
+          Checkbox
         </ButtonAnchor>
       </li>
     </React.Fragment>
