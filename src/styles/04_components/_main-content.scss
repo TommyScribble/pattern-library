@@ -3,5 +3,6 @@
 // --------------------------------------- \\
 
 .main-content {
-	padding-left: 300px;
+	padding-left: calc(300px + 1em);
+	padding-right: 1em;
 }

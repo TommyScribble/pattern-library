@@ -4,15 +4,5 @@
 @import '~bulma/bulma.sass';
 // Custom styles
 @import '02_tools/colors', '02_tools/fonts', '02_tools/base',
-	'04_components/sidebar', '04_components/main-content', '04_components/footer';
-
-.side-nav {
-	list-style: none;
-	padding-left: 0px;
-}
-
-.button-anchor {
-	border: 1px solid rgb(207, 207, 207);
-	color: #FFF;
-	background-color: #000FFF;
-}
+	'03_objects/buttons', '04_components/sidebar', '04_components/main-content',
+  '04_components/footer';

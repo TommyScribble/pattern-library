@@ -1,0 +1,20 @@
+// --------------------------------------- \\
+//	BUTTONS
+// --------------------------------------- \\
+
+// Side Navigation links
+
+.side-nav__item {
+
+	.side-nav__link {
+		display: block;
+		padding: 0.6em 0.5em;
+		color: $white;
+		transition: all ease-out 0.6s;
+
+		&:hover {
+			background-color: rgba(166, 0, 22, 0.6);
+			padding-left: 2em;
+		}
+	}
+}
