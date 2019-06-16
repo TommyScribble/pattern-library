@@ -31,4 +31,11 @@
 		text-align: center;
 		border-bottom: 1px solid $white;
 	}
+
+	.side-nav__item {
+
+		&:last-child {
+			padding-bottom: 80px;
+		}
+	}
 }

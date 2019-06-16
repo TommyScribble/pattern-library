@@ -16,10 +16,19 @@ const Navigation = props => {
       <li className="side-nav__item">
         <ButtonAnchor
           navigation={true}
-          path={'/button'}
+          path={'/buttons'}
           anchorClass={'side-nav__link'}
         >
           Buttons
+        </ButtonAnchor>
+      </li>
+      <li className="side-nav__item">
+        <ButtonAnchor
+          navigation={true}
+          path={'/accordion'}
+          anchorClass={'side-nav__link'}
+        >
+          Accordion
         </ButtonAnchor>
       </li>
       <li className="side-nav__item">

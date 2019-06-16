@@ -14,13 +14,11 @@
 
 		&:hover {
 			background-color: rgba(166, 0, 22, 0.6);
-			padding-left: 2em;
 			transition: all ease 0.3s;
 		}
 
 		&.active {
 			background-color: rgba(166, 0, 22, 0.4);
-			padding-left: 2em;
 		}
 	}
 }
