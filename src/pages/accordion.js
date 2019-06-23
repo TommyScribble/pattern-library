@@ -2,29 +2,13 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import Accordion from '../objects/accordion/Accordion';
 
-// const data = [
-//     {
-//       title: 'test 1'
-//     },
-//     {
-//       title: 'test 2'
-//     },
-//     {
-//       title: 'test 3'
-//     },
-//     {
-// 	  title: 'test 4'
-// 	},
-// 	{
-//       content: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum'
-//     }
-// ];
-
 const accordion = props => {
-  return (
-    <PageLayout>
-      <div>This is the accordion page</div>
-      <Accordion>
+	return (
+		<PageLayout>
+			<div>This is the accordion page</div>
+			{/* 
+	 // OLD ACCORDION 
+	  <Accordion>
         <div label="Alligator Mississippiensis">
           <p>
             <strong>Common Name:</strong> American Alligator
@@ -48,9 +32,9 @@ const accordion = props => {
             <strong>Endangered Status:</strong> Critically Endangered
           </p>
         </div>
-      </Accordion>
-    </PageLayout>
-  );
+	  </Accordion> */}
+		</PageLayout>
+	);
 };
 
 export default accordion;
