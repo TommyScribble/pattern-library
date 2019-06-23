@@ -1,6 +1,8 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
-import Accordion from '../objects/accordion/Accordion';
+// import Accordion from '../objects/accordion/Accordion';
+import Accordion from '../objects/accordionNEW/Accordion';
+import data from '../objects/accordionNEW/Data';
 
 const accordion = props => {
 	return (
@@ -33,6 +35,7 @@ const accordion = props => {
           </p>
         </div>
 	  </Accordion> */}
+			<Accordion data={data} />
 		</PageLayout>
 	);
 };
