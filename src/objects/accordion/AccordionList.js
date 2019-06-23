@@ -5,7 +5,6 @@ const AccordionList = props => {
 
 	return (
 		<li>
-			{console.log('props', props)}
 			<button onClick={() => handleClick(index)}>{title}</button>
 			{currentIndex === index && <div>{content}</div>}
 		</li>
