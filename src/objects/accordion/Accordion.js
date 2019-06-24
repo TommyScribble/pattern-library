@@ -7,15 +7,14 @@ class Accordion extends React.Component {
 		super(props);
 		this.state = {
 			currentIndex: -1,
-			isOpen: false,
+			// isOpen: false,
 		};
 	}
 
-	handleClick = (index, isOpen) => {
-		this.setState({
-			currentIndex: index,
-			isOpen: !isOpen,
-		});
+	accordionControl = (index, isOpen) => {
+		const isOpenContent = isOpen;
+		const indexContent = index;
+		return console.log('Acordion Control', isOpenContent, indexContent);
 	};
 
 	render() {
@@ -28,16 +27,15 @@ class Accordion extends React.Component {
 						<li key={element.id}>
 							<AccordionItemButton
 								title={element.title}
-								handleClick={this.handleClick}
+								accordionControl={this.accordionControl}
 								index={element.id}
-								// currentIndex={this.state.currentIndex}
-								// isOpen={this.state.isOpen}
+								currentIndex={this.state.currentIndex}
 							/>
 							<AccordionItemContent
 								content={element.content}
 								index={element.id}
 								currentIndex={this.state.currentIndex}
-								isOpen={this.state.isOpen}
+								// isOpen={isOpenContent}
 							/>
 						</li>
 					);

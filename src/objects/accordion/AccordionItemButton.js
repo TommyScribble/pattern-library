@@ -1,27 +1,37 @@
 import React from 'react';
 
 class AccordionItemButton extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		currentIndex: -1,
-	// 		isOpen: false,
-	// 	};
-	// }
+	constructor(props) {
+		super(props);
+		this.state = {
+			isOpen: false,
+		};
+	}
 
-	// handleClick = (index, isOpen) => {
-	// 	this.setState({
-	// 		currentIndex: index,
-	// 		isOpen: !isOpen,
-	// 	});
-	// };
+	handleButtonClick = (index, isOpen) => {
+		this.setState({
+			isOpen: !isOpen,
+		});
+		//create loop back to parent here
+		this.props.accordionControl(index, isOpen);
+	};
 
 	render() {
-		const { title, handleClick, index, isOpen } = this.props;
-
+		const { title, index } = this.props;
+		console.log(
+			'Button-STATE',
+			this.state.isOpen,
+			index,
+			this.props.currentIndex
+		);
 		return (
 			<div>
-				<button onClick={() => handleClick(index, isOpen)}>{title}</button>
+				<button
+					onClick={() => {
+						this.handleButtonClick(index, this.state.isOpen);
+					}}>
+					{title}
+				</button>
 			</div>
 		);
 	}
