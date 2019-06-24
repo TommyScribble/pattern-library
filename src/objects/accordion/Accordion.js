@@ -19,18 +19,19 @@ class Accordion extends React.Component {
 	};
 
 	render() {
+		const { data } = this.props;
+
 		return (
 			<ul>
-				{this.props.data.map(element => {
+				{data.map(element => {
 					return (
 						<li key={element.id}>
 							<AccordionItemButton
 								title={element.title}
-								closeAllAccordions={this.closeAllAccordions}
 								handleClick={this.handleClick}
 								index={element.id}
-								currentIndex={this.state.currentIndex}
-								isOpen={this.state.isOpen}
+								// currentIndex={this.state.currentIndex}
+								// isOpen={this.state.isOpen}
 							/>
 							<AccordionItemContent
 								content={element.content}

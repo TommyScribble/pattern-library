@@ -1,12 +1,30 @@
 import React from 'react';
 
-const AccordionItemButton = props => {
-	const { title, handleClick, index, isOpen } = props;
+class AccordionItemButton extends React.Component {
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		currentIndex: -1,
+	// 		isOpen: false,
+	// 	};
+	// }
 
-	// buton onClick make all buttons isOpen=false
-	// them make this button only isOpen=true
+	// handleClick = (index, isOpen) => {
+	// 	this.setState({
+	// 		currentIndex: index,
+	// 		isOpen: !isOpen,
+	// 	});
+	// };
 
-	return <button onClick={() => handleClick(index, isOpen)}>{title}</button>;
-};
+	render() {
+		const { title, handleClick, index, isOpen } = this.props;
+
+		return (
+			<div>
+				<button onClick={() => handleClick(index, isOpen)}>{title}</button>
+			</div>
+		);
+	}
+}
 
 export default AccordionItemButton;

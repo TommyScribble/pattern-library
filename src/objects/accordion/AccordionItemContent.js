@@ -2,8 +2,12 @@ import React from 'react';
 
 const AccordionItemContent = props => {
 	const { currentIndex, index, content, isOpen } = props;
-	// console.log('content-open', isOpen)
-	return isOpen && currentIndex === index && <div>{content}</div>;
+
+	if (isOpen && currentIndex === index) {
+		return <div>{content}</div>;
+	} else {
+		return null;
+	}
 };
 
 export default AccordionItemContent;
