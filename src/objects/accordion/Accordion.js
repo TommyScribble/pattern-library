@@ -18,15 +18,6 @@ class Accordion extends React.Component {
 		});
 	};
 
-	// closeAllAccordions = (isOpen) => {
-	// 	// buton onClick make all buttons isOpen=false
-	// 	// find all isOpen = true
-	// 	this.setState({
-	// 		isOpen: isOpen
-	// 	})
-	// 	console.log('closeAllAccordions', this.state)
-	// }
-
 	render() {
 		return (
 			<ul>
