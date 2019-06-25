@@ -4,26 +4,25 @@ class AccordionItemButton extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			currentIndex: -1,
 			isOpen: false,
 		};
 	}
 
 	handleButtonClick = (index, isOpen) => {
 		this.setState({
+			currentIndex: index,
 			isOpen: !isOpen,
 		});
 		//create loop back to parent here
-		this.props.accordionControl(index, isOpen);
+		// this.props.accordionControl(this.state.currentIndex, this.state.isOpen);
 	};
 
 	render() {
-		const { title, index } = this.props;
-		console.log(
-			'Button-STATE',
-			this.state.isOpen,
-			index,
-			this.props.currentIndex
-		);
+		const { title, index, accordionControl } = this.props;
+		console.log('Clixk', this.state);
+
+		accordionControl(this.state.currentIndex, this.state.isOpen);
 		return (
 			<div>
 				<button

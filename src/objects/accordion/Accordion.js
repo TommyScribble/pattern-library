@@ -6,20 +6,22 @@ class Accordion extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currentIndex: -1,
+			// currentIndex: -1,
 			// isOpen: false,
 		};
 	}
 
 	accordionControl = (index, isOpen) => {
 		const isOpenContent = isOpen;
-		const indexContent = index;
-		return console.log('Acordion Control', isOpenContent, indexContent);
+		const currentIndexContent = index;
+		return (
+			[isOpenContent, currentIndexContent] &&
+			console.log('ACOORDION-CONTROL', isOpenContent, currentIndexContent)
+		);
 	};
 
 	render() {
 		const { data } = this.props;
-
 		return (
 			<ul>
 				{data.map(element => {
@@ -31,11 +33,12 @@ class Accordion extends React.Component {
 								index={element.id}
 								currentIndex={this.state.currentIndex}
 							/>
+							{console.log('INSIDE', element.id)}
 							<AccordionItemContent
 								content={element.content}
 								index={element.id}
-								currentIndex={this.state.currentIndex}
-								// isOpen={isOpenContent}
+								currentIndex={this.currentIndexContent}
+								isOpen={this.isOpenContent}
 							/>
 						</li>
 					);
