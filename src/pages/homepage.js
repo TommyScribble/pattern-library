@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import Heading from '../objects/Heading';
 import Text from '../objects/Text';
-import ButtonAnchor from '../objects/ButtonAnchor';
+import Anchor from '../objects/Anchor';
 
 const homepage = props => {
 	return (
@@ -18,14 +18,14 @@ const homepage = props => {
 				out more
 			</Text>
 			<Text>To get involved use one of the links below</Text>
-			<ButtonAnchor path={'/buttons'} anchorClass={'button'} internal={true}>
+			<Anchor path={'/buttons'} anchorClass={'button'} internal={true}>
 				Get started
-			</ButtonAnchor>
-			<ButtonAnchor
+			</Anchor>
+			<Anchor
 				path={'https://github.com/TommyScribble/pattern-library'}
 				anchorClass={'button'}>
 				View Git
-			</ButtonAnchor>
+			</Anchor>
 		</PageLayout>
 	);
 };
