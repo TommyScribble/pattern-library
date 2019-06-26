@@ -1,12 +1,13 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import Text from '../objects/Text';
 
 const homepage = props => {
-  return (
-    <PageLayout>
-      <div>This is the homepage</div>
-    </PageLayout>
-  );
+	return (
+		<PageLayout>
+			<Text>This is the homepage</Text>
+		</PageLayout>
+	);
 };
 
 export default homepage;

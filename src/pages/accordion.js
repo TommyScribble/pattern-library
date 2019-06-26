@@ -2,11 +2,12 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import Accordion from '../objects/accordion/Accordion';
 import AccordionItem from '../objects/accordion/AccordionItem';
+import Text from '../objects/Text';
 
 const accordion = props => {
 	return (
 		<PageLayout>
-			<div>This is the accordion page</div>
+			<Text>This is the accordion page</Text>
 
 			<Accordion multitabs={false}>
 				{' '}
