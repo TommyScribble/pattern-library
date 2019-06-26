@@ -7,9 +7,10 @@ const accordion = props => {
 	return (
 		<PageLayout>
 			<div>This is the accordion page</div>
-			{/* <Accordion data={data} />   */}
 
 			<Accordion multitabs={false}>
+				{' '}
+				{/* Nedd to add this props to make multi tabs open, which also means need to set for only one open at a time */}
 				<AccordionItem title={'Are alligators active at night?'}>
 					<p>
 						No matter how inviting the water, it makes sense to avoid it during

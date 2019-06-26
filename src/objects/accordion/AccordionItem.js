@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import Accordion from './Accordion';
 
 class AccordionItem extends React.Component {
 	constructor(props) {
@@ -17,38 +16,64 @@ class AccordionItem extends React.Component {
 	};
 
 	render() {
-		const defaultStyle = {
-			display: 'block',
-		};
-
-		const { title, objClass } = this.props;
+		const {
+			btnStyle,
+			title,
+			btnClass,
+			contentStyle,
+			children,
+			contentClass,
+		} = this.props;
 
 		return (
 			<React.Fragment>
 				<button
-					style={defaultStyle}
-					className={objClass}
+					style={btnStyle}
+					className={btnClass}
 					onClick={() => {
 						this.handleClick(this.state.isOpen);
 					}}>
 					{title}
 				</button>
-				{this.state.isOpen && <div>{this.props.children}</div>}
+				{this.state.isOpen && (
+					<div className={contentClass} style={contentStyle}>
+						{children}
+					</div>
+				)}
 			</React.Fragment>
 		);
 	}
 }
 
-Accordion.defaultProps = {
+AccordionItem.defaultProps = {
 	children: 'this is some test content',
-	// style: defaultStyle
+	btnStyle: {
+		display: 'block',
+		width: '100%',
+		padding: '12px',
+		backgroundColor: '#E20016',
+		color: 'white',
+		fontSize: '11px',
+		textTransform: 'uppercase',
+		border: 'none',
+		cursor: 'pointer',
+	},
+	contentStyle: {
+		display: 'block',
+		width: '100%',
+		padding: '16px',
+		backgroundColor: 'rgba(166, 0, 22, 0.4)',
+		color: 'black',
+	},
 };
 
-Accordion.propTypes = {
-	style: propTypes.object.isRequired,
-	childrent: propTypes.string.isRequired,
+AccordionItem.propTypes = {
+	btnStyle: propTypes.object,
+	contentStyle: propTypes.object,
+	children: propTypes.object,
 	title: propTypes.string,
-	objClass: propTypes.string,
+	btnClass: propTypes.string,
+	contentClass: propTypes.string,
 };
 
 export default AccordionItem;
