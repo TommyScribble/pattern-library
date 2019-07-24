@@ -4,76 +4,74 @@ import propTypes from 'prop-types';
 class AccordionItem extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			isOpen: false,
-		};
+		this.accordionref = React.createRef();
 	}
 
-	handleClick = isOpen => {
-		this.setState({
-			isOpen: !isOpen,
-		});
+	componentDidMount() {
+		this.accordion = this.accordionref.current;
+		this.height = this.accordionref.current.clientHeight;
+		this.accordionref.current.classList.add('js-closed');
+	}
+
+	addRemoveHeight = (title, isOpen, e) => {
+		const thisButton = e.currentTarget,
+			navButtons = document.getElementsByClassName('navigation__heading-text');
+
+		if (!this.props.isOpen) {
+			for (let i = 0; i < navButtons.length; i++) {
+				navButtons[i].classList.remove('js-open');
+			}
+			thisButton.classList.add('js-open');
+			this.accordion.style.height = `${this.height}px`;
+		} else {
+			thisButton.classList.remove('js-open');
+			this.accordion.style.height = `0px`;
+		}
+		this.props.handleClick(title, isOpen);
 	};
 
 	render() {
-		const {
-			btnStyle,
-			title,
-			btnClass,
-			contentStyle,
-			children,
-			contentClass,
-		} = this.props;
+		const { title, contentClass } = this.props;
+
+		const { icon } = this.props.childProps;
+
+		!this.props.allowMultipleOpen &&
+			!this.props.isOpen &&
+			this.accordionref.current !== null &&
+			this.accordionref.current.removeAttribute('style');
 
 		return (
-			<React.Fragment>
+			<li>
 				<button
-					style={btnStyle}
-					className={btnClass}
-					onClick={() => {
-						this.handleClick(this.state.isOpen);
-					}}>
+					className={'navigation__heading-text'}
+					onClick={e =>
+						this.addRemoveHeight(this.props.title, !this.props.isOpen, e)
+					}>
+					{/* {icon && ( <Icon iconName={iconName} /> )} */}
 					{title}
 				</button>
-				{this.state.isOpen && (
-					<div className={contentClass} style={contentStyle}>
-						{children}
-					</div>
-				)}
-			</React.Fragment>
+				<ul
+					ref={this.accordionref}
+					className={`${contentClass} navigation-list accordion-content`}>
+					{this.props.children}
+				</ul>
+			</li>
 		);
 	}
 }
 
-AccordionItem.defaultProps = {
-	children: 'this is some test content',
-	btnStyle: {
-		display: 'block',
-		width: '100%',
-		padding: '12px',
-		backgroundColor: '#E20016',
-		color: 'white',
-		fontSize: '11px',
-		textTransform: 'uppercase',
-		border: 'none',
-		cursor: 'pointer',
-	},
-	contentStyle: {
-		display: 'block',
-		width: '100%',
-		padding: '16px',
-		backgroundColor: 'rgba(166, 0, 22, 0.4)',
-		color: 'black',
-	},
+AccordionItem.propTypes = {
+	children: propTypes.instanceOf(Object).isRequired,
+	isOpen: propTypes.bool,
+	title: propTypes.string,
+	onClick: propTypes.func,
+	btnClass: propTypes.string.isRequired,
+	contentClass: propTypes.string.isRequired,
 };
 
-AccordionItem.propTypes = {
-	btnStyle: propTypes.object,
-	contentStyle: propTypes.object,
-	children: propTypes.object,
-	title: propTypes.string,
-	btnClass: propTypes.string,
-	contentClass: propTypes.string,
+AccordionItem.defaultProps = {
+	contentClass: '',
+	btnClass: '',
 };
 
 export default AccordionItem;
