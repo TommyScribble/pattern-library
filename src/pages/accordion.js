@@ -8,6 +8,7 @@ const accordion = props => {
 	return (
 		<PageLayout>
 			<Text>This is the accordion page</Text>
+			<Heading tagNumber={4} headingText={'Single Open'} />
 			<Accordion>
 				<div title={'Alligator Mississippiensis'} isOpen={false}>
 					<li>
