@@ -67,6 +67,7 @@ AccordionItem.propTypes = {
 	onClick: propTypes.func,
 	btnClass: propTypes.string.isRequired,
 	contentClass: propTypes.string.isRequired,
+	icon: propTypes.string,
 };
 
 AccordionItem.defaultProps = {
