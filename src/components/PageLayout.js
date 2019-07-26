@@ -6,7 +6,11 @@ const PageLayout = props => {
 	return (
 		<React.Fragment>
 			<Header />
-			<main className="main-content">{props.children}</main>
+			<main className="main-content">
+				<section className="section">
+					<div className="container">{props.children}</div>
+				</section>
+			</main>
 		</React.Fragment>
 	);
 };
