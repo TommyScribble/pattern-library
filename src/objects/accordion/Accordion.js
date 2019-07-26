@@ -62,6 +62,7 @@ class Accordion extends React.Component {
 Accordion.propTypes = {
 	allowMultipleOpen: propTypes.bool,
 	children: propTypes.instanceOf(Object).isRequired,
+	icon: propTypes.string,
 };
 
 export default Accordion;
