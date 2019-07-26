@@ -15,7 +15,7 @@ class AccordionItem extends React.Component {
 
 	addRemoveHeight = (title, isOpen, e) => {
 		const thisButton = e.currentTarget,
-			navButtons = document.getElementsByClassName('navigation__heading-text');
+			navButtons = document.getElementsByClassName('accordion__button');
 
 		if (!this.props.isOpen) {
 			for (let i = 0; i < navButtons.length; i++) {
@@ -43,18 +43,18 @@ class AccordionItem extends React.Component {
 		return (
 			<li>
 				<button
-					className={'navigation__heading-text'}
+					className={'accordion__button'}
 					onClick={e =>
 						this.addRemoveHeight(this.props.title, !this.props.isOpen, e)
 					}>
 					{/* {icon && ( <Icon iconName={iconName} /> )} */}
 					{title}
 				</button>
-				<ul
+				<div
 					ref={this.accordionref}
-					className={`${contentClass} navigation-list accordion-content`}>
+					className={`${contentClass} accordion-content`}>
 					{this.props.children}
-				</ul>
+				</div>
 			</li>
 		);
 	}

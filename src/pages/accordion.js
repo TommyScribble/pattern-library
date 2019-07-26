@@ -11,53 +11,53 @@ const accordion = props => {
 			<Heading tagNumber={4} headingText={'Single Open'} />
 			<Accordion>
 				<div title={'Alligator Mississippiensis'} isOpen={false}>
-					<li>
+					<div>
 						<strong>Common Name:</strong> American Alligator
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Distribution:</strong> Texas to North Carolina, United
 						States
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Endangered Status:</strong> Currently Not Endangered
-					</li>
+					</div>
 				</div>
 				<div title={'Alligator Sinensis'} isOpen={false}>
-					<li>
+					<div>
 						<strong>Common Name:</strong> Chinese Alligator
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Distribution:</strong> Eastern China
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Endangered Status:</strong> Critically Endangered
-					</li>
+					</div>
 				</div>
 			</Accordion>
 			<Heading tagNumber={4} headingText={'Multiple Open'} />
 			<Accordion allowMultipleOpen>
 				<div title={'Alligator Mississippiensis'} isOpen={false}>
-					<li>
+					<div>
 						<strong>Common Name:</strong> American Alligator
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Distribution:</strong> Texas to North Carolina, United
 						States
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Endangered Status:</strong> Currently Not Endangered
-					</li>
+					</div>
 				</div>
 				<div title={'Alligator Sinensis'} isOpen={false}>
-					<li>
+					<div>
 						<strong>Common Name:</strong> Chinese Alligator
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Distribution:</strong> Eastern China
-					</li>
-					<li>
+					</div>
+					<div>
 						<strong>Endangered Status:</strong> Critically Endangered
-					</li>
+					</div>
 				</div>
 			</Accordion>
 		</PageLayout>

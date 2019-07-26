@@ -39,7 +39,7 @@ class Accordion extends React.Component {
 		const { children, icon } = this.props;
 
 		return (
-			<ul className="navigation">
+			<ul className="accordion">
 				{children.map((child, i) => {
 					return (
 						<AccordionItem
