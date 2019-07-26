@@ -41,9 +41,9 @@ class AccordionItem extends React.Component {
 			this.accordionref.current.removeAttribute('style');
 
 		return (
-			<li>
+			<li className="accordion-item">
 				<button
-					className={'accordion__button'}
+					className={'accordion-item__button'}
 					onClick={e =>
 						this.addRemoveHeight(this.props.title, !this.props.isOpen, e)
 					}>
@@ -52,7 +52,7 @@ class AccordionItem extends React.Component {
 				</button>
 				<div
 					ref={this.accordionref}
-					className={`${contentClass} accordion-content`}>
+					className={`${contentClass} accordion-item__content`}>
 					{this.props.children}
 				</div>
 			</li>

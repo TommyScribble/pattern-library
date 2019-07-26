@@ -1,4 +1,35 @@
+// --------------------------------------- \\
+//	FOOTER
+// --------------------------------------- \\
+
+// Class to ensure all accordions are closed on page load
+
 .js-closed {
 	overflow: hidden;
 	height: 0px;
+}
+
+.accordion {
+	width: 100%;
+
+	.accordion-item {
+
+		&__button {
+			background-color: $primary-color;
+			width: 100%;
+			margin-bottom: 0.8em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			border: none;
+			color: $white;
+			text-align: left;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1em;
+		}
+
+		&__content {
+			// padding: 1em 1.5em;
+		}
+	}
 }
