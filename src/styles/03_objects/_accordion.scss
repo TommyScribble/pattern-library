@@ -6,6 +6,7 @@
 
 .js-closed {
 	overflow: hidden;
+	transition: all 0.3s ease-out;
 	height: 0px;
 }
 
@@ -13,23 +14,29 @@
 	width: 100%;
 
 	.accordion-item {
+		margin-bottom: 0.6em;
 
 		&__button {
-			background-color: $scribble-red;
+			background-color: $grey-dark;
 			width: 100%;
-			margin-bottom: 0.8em;
 			padding-top: 1em;
 			padding-bottom: 1em;
+			padding-left: 1.5em;
 			border: none;
 			color: $white;
 			text-align: left;
 			text-transform: uppercase;
 			font-weight: 600;
 			font-size: 1em;
+			cursor: pointer;
 		}
 
-		&__content {
-			// padding: 1em 1.5em;
+		&__background {
+			background-color: $grey-light;
+
+			.content {
+				padding: 1em 1.5em;
+			}
 		}
 	}
 }

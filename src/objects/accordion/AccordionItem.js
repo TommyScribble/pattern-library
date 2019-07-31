@@ -33,7 +33,10 @@ class AccordionItem extends React.Component {
 	render() {
 		const { title, contentClass } = this.props;
 
-		const { icon } = this.props.childProps;
+		// const { icon } = this.props.childProps;
+		// const style = {
+		// 	padding: '1em 1.5em'
+		// }
 
 		!this.props.allowMultipleOpen &&
 			!this.props.isOpen &&
@@ -52,8 +55,8 @@ class AccordionItem extends React.Component {
 				</button>
 				<div
 					ref={this.accordionref}
-					className={`${contentClass} accordion-item__content`}>
-					{this.props.children}
+					className={`${contentClass} accordion-item__background`}>
+					<div className="content">{this.props.children}</div>
 				</div>
 			</li>
 		);
