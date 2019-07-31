@@ -6,7 +6,7 @@ const Header = props => {
 	return (
 		<header>
 			<nav className="top-nav">
-				<Heading tagNumber={1} headingText={'React UI component library'} />
+				<Heading tagNumber={1} headingText={'React UI library'} />
 			</nav>
 			<SideBar />
 		</header>
