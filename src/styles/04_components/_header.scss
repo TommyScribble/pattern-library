@@ -4,5 +4,9 @@
 
 .top-nav {
 	padding: 2rem 1.5rem 1rem;
-	border-bottom: 2px solid $text-color;
+
+	h1 {
+		padding-bottom: 1em;
+		border-bottom: 2px solid $grey-mid;
+	}
 }
