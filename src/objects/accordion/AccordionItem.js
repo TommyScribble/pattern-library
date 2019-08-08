@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import Icon from 'react-icon-library';
 
 class AccordionItem extends React.Component {
 	constructor(props) {
@@ -30,13 +31,15 @@ class AccordionItem extends React.Component {
 		this.props.handleClick(title, isOpen);
 	};
 
-	render() {
-		const { title, contentClass } = this.props;
+	iconSwitch = isOpen => {
+		if (!isOpen) {
+			return <Icon className="test" iconName={'CaretDown2'} />;
+		}
+		return <Icon iconName={'CaretUp2'} />;
+	};
 
-		// const { icon } = this.props.childProps;
-		// const style = {
-		// 	padding: '1em 1.5em'
-		// }
+	render() {
+		const { title, contentClass, icon, isOpen } = this.props;
 
 		!this.props.allowMultipleOpen &&
 			!this.props.isOpen &&
@@ -50,8 +53,8 @@ class AccordionItem extends React.Component {
 					onClick={e =>
 						this.addRemoveHeight(this.props.title, !this.props.isOpen, e)
 					}>
-					{/* {icon && ( <Icon iconName={iconName} /> )} */}
 					{title}
+					{icon && <div className="icon">{this.iconSwitch(isOpen)}</div>}
 				</button>
 				<div
 					ref={this.accordionref}
@@ -70,7 +73,7 @@ AccordionItem.propTypes = {
 	onClick: propTypes.func,
 	btnClass: propTypes.string.isRequired,
 	contentClass: propTypes.string.isRequired,
-	icon: propTypes.string,
+	icon: propTypes.bool,
 };
 
 AccordionItem.defaultProps = {
