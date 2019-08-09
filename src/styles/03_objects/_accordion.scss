@@ -29,6 +29,11 @@
 			font-weight: 600;
 			font-size: 1em;
 			cursor: pointer;
+			transition: background-color 0.33s ease;
+
+			&.js-open {
+				background-color: darken($grey-dark, 30%);
+			}
 		}
 
 		&__background {
