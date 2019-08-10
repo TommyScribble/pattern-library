@@ -46,8 +46,8 @@ class AccordionItem extends React.Component {
 			<li className="accordion-item">
 				<button
 					className={`accordion-item__button ${openClass}`}
-					onClick={e =>
-						this.addRemoveHeight(this.props.title, !this.props.isOpen, e)
+					onClick={() =>
+						this.addRemoveHeight(this.props.title, !this.props.isOpen)
 					}>
 					{title}
 					{icon && <div className="icon">{this.iconSwitch(isOpen)}</div>}
