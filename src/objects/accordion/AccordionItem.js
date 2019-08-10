@@ -8,13 +8,15 @@ class AccordionItem extends React.Component {
 		this.accordionref = React.createRef();
 	}
 
-	componentDidMount() {
+	componentDidMount(props) {
+		console.log('props', this.props);
+
 		this.accordion = this.accordionref.current;
 		this.height = this.accordionref.current.clientHeight;
 		this.accordionref.current.classList.add('js-closed');
 	}
 
-	addRemoveHeight = (title, isOpen, e) => {
+	addRemoveHeight = (title, isOpen) => {
 		if (!this.props.isOpen) {
 			this.accordion.style.height = `${this.height}px`;
 		} else {
