@@ -15,12 +15,7 @@ class AccordionItem extends React.Component {
 	}
 
 	addRemoveHeight = (title, isOpen, e) => {
-		const navButtons = document.getElementsByClassName('accordion__button');
-
 		if (!this.props.isOpen) {
-			for (let i = 0; i < navButtons.length; i++) {
-				navButtons[i].classList.remove('js-open');
-			}
 			this.accordion.style.height = `${this.height}px`;
 		} else {
 			this.accordion.style.height = `0px`;
