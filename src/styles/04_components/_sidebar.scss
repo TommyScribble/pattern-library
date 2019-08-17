@@ -15,6 +15,7 @@
 	padding-bottom: 60px;
 	z-index: 999;
 	overflow-y: auto;
+	transition: width 0.5s ease;
 
 	&.fixed {
 		position: fixed;
@@ -22,9 +23,19 @@
 		margin: 0;
 		left: 0;
 		top: 0;
-		transition: all 0.5s ease;
 		@include mobile {
+			width: 0px;
 			left: -300px;
+
+			&.js-close {
+				width: 0px;
+				left: -300px;
+			}
+
+			&.js-open {
+				width: 300px;
+				left: 0;
+			}
 		}
 	}
 

@@ -8946,10 +8946,10 @@ react-error-overlay@^5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-icon-library@0.1.1-6rc:
-  version "0.1.1-6rc"
-  resolved "https://registry.yarnpkg.com/react-icon-library/-/react-icon-library-0.1.1-6rc.tgz#6ec6e5845eafa86006eac466a1a51ac80d017835"
-  integrity sha512-YvmPzv+GkL0wDq0rmJOndK9iYlGBGzIdWHpZC3NCGkTLiCfF0kUw57KUpLn/86jYXuvGd8Y8QOWSYsWxOrUKJg==
+react-icon-library@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-icon-library/-/react-icon-library-0.1.2.tgz#b4c456982fa73d18d8249277a21bbc11c77713a7"
+  integrity sha512-soCv1NHrM//2mx2kapx7bjitm0S+e7l2BS3IvNApzZVYe8JWIVCMfFT9Z9O7KneF6t+8P82mNCf/8njgtZbk8A==
   dependencies:
     bulma "^0.7.5"
 

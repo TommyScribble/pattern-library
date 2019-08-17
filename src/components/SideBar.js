@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 
 const SideBar = props => {
 	const versionNo = 'Version 1.0.0';
+
 	return (
 		<ul className="side-nav fixed">
 			<li className="logo">
