@@ -7,7 +7,7 @@ const SideBar = props => {
 	const versionNo = 'Version 1.0.0';
 
 	return (
-		<ul className="side-nav fixed">
+		<ul className="side-nav fixed js-close">
 			<li className="logo">
 				<Logo anchor={'./'} logo={myLogo} altText={'Pattern Library 2019'} />
 			</li>
