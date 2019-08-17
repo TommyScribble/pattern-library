@@ -9,8 +9,6 @@ class AccordionItem extends React.Component {
 	}
 
 	componentDidMount(props) {
-		console.log('props', this.props);
-
 		this.accordion = this.accordionref.current;
 		this.height = this.accordionref.current.clientHeight;
 		this.accordionref.current.classList.add('js-closed');
