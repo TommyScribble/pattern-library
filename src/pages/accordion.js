@@ -9,7 +9,7 @@ const accordion = props => {
 			<Heading tagNumber={2} headingText={'Accordions'} />
 			<Heading tagNumber={3} headingText={'Single Open'} />
 			<Accordion>
-				<div title={'Alligator Mississippiensis'} isOpen={false}>
+				<div title={'Alligator Mississippiensis-01'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
 					</div>
@@ -21,7 +21,7 @@ const accordion = props => {
 						<strong>Endangered Status:</strong> Currently Not Endangered
 					</div>
 				</div>
-				<div title={'Alligator Sinensis'} isOpen={false}>
+				<div title={'Alligator Sinensis-02'}>
 					<div>
 						<strong>Common Name:</strong> Chinese Alligator
 					</div>
@@ -35,7 +35,7 @@ const accordion = props => {
 			</Accordion>
 			<Heading tagNumber={3} headingText={'Multiple Open'} />
 			<Accordion allowMultipleOpen>
-				<div title={'Alligator Mississippiensis'} isOpen={false}>
+				<div title={'Alligator Mississippiensis-11'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
 					</div>
@@ -47,7 +47,7 @@ const accordion = props => {
 						<strong>Endangered Status:</strong> Currently Not Endangered
 					</div>
 				</div>
-				<div title={'Alligator Sinensis'} isOpen={false}>
+				<div title={'Alligator Sinensis-12'}>
 					<div>
 						<strong>Common Name:</strong> Chinese Alligator
 					</div>
@@ -61,7 +61,7 @@ const accordion = props => {
 			</Accordion>
 			<Heading tagNumber={3} headingText={'Multiple Open With Icons'} />
 			<Accordion allowMultipleOpen icon>
-				<div title={'Alligator Mississippiensis'} isOpen={false}>
+				<div title={'Alligator Mississippiensis-21'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
 					</div>
@@ -73,7 +73,7 @@ const accordion = props => {
 						<strong>Endangered Status:</strong> Currently Not Endangered
 					</div>
 				</div>
-				<div title={'Alligator Sinensis'} isOpen={false}>
+				<div title={'Alligator Sinensis-22'}>
 					<div>
 						<strong>Common Name:</strong> Chinese Alligator
 					</div>
