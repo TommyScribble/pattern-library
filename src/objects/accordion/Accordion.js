@@ -3,10 +3,6 @@ import propTypes from 'prop-types';
 import AccordionItem from './AccordionItem';
 
 class Accordion extends React.Component {
-	static defaultProps = {
-		allowMultipleOpen: false,
-	};
-
 	constructor(props) {
 		super(props);
 		const children = this.props.children;
@@ -37,7 +33,6 @@ class Accordion extends React.Component {
 
 	render() {
 		const { children, icon } = this.props;
-
 		return (
 			<ul className="accordion">
 				{children.map((child, i) => {
@@ -62,7 +57,7 @@ class Accordion extends React.Component {
 Accordion.propTypes = {
 	allowMultipleOpen: propTypes.bool,
 	children: propTypes.instanceOf(Object).isRequired,
-	icon: propTypes.string,
+	icon: propTypes.bool,
 };
 
 export default Accordion;
