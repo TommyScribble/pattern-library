@@ -67,6 +67,10 @@ header,
 main,
 footer {
 	padding-left: 300px;
+	transition: 0.5s all ease;
+	@include mobile {
+		padding-left: 0px;
+	}
 }
 
 p {
