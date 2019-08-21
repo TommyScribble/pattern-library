@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Heading from '../objects/Heading';
 import SideBar from './SideBar';
 import Icon from 'react-icon-library';
 
-const Header = props => {
+const Header = () => {
+	let [currentIcon, updateIcon] = useState('Burger1');
+
 	const sideBar = document.getElementsByClassName('side-nav');
 
-	const burgerIcon = '';
+	let burgerIcon = currentIcon;
 
-	const openNavClass = burgerIcon => {
+	const openCloseNav = () => {
+		// This needs to trigger a re-render of ther burgerIcon so needs to refacotr a;ll to use react hooks
 		if (sideBar[0].classList.contains('js-open')) {
 			sideBar[0].classList.remove('js-open');
 			sideBar[0].classList.add('js-close');
@@ -16,17 +19,19 @@ const Header = props => {
 			sideBar[0].classList.remove('js-close');
 			sideBar[0].classList.add('js-open');
 		}
-		return (burgerIcon = sideBar[0].classList.contains('js-open')
-			? 'Cross1'
-			: 'Burger1');
 	};
 
 	return (
 		<header>
 			<nav className="top-nav">
 				<Heading tagNumber={1} headingText={'React UI library'} />
-				<button className="burger-menu" onClick={() => openNavClass()}>
-					<Icon iconName={'Burger1'} />
+				<button
+					className="burger-menu"
+					onClick={() => {
+						openCloseNav();
+						updateIcon(currentIcon === 'Cross1' ? 'Burger1' : 'Cross1');
+					}}>
+					<Icon iconName={burgerIcon} />
 				</button>
 			</nav>
 			<SideBar />
