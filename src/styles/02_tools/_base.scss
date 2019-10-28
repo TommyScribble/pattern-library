@@ -1,9 +1,12 @@
-// --------------------------------------- \\
-//	BASE
-// --------------------------------------- \\
+////
+///	BASE STYLES
+/// @group base styles
+////
 
+/// Base font size
 $basefont-size: 16px;
 
+/// Body styles
 body {
 	font-family: $ff-open-sans;
 	font-weight: 300;
@@ -16,6 +19,7 @@ code {
 		monospace;
 }
 
+///
 h1,
 h2,
 h3,
@@ -26,43 +30,43 @@ h6 {
 	font-weight: 500;
 	color: $heading-color;
 }
-
+///
 h1 {
 	font-size: 2.5rem;
 	margin-bottom: 1.5rem;
 	line-height: 1.25;
 }
-
+///
 h2 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 	line-height: 1.2;
 }
-
+///
 h3 {
 	font-size: 1.75rem;
 	margin-bottom: 0.75rem;
 	line-height: 1.1;
 }
-
+///
 h4 {
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 	line-height: 1;
 }
-
+///
 h5 {
 	font-size: 1.25rem;
 	margin-bottom: 0.25rem;
 	line-height: 1;
 }
-
+///
 h6 {
 	font-size: 1rem;
 	margin-bottom: 0.25rem;
 	line-height: 1;
 }
-
+///
 header,
 main,
 footer {
@@ -72,7 +76,7 @@ footer {
 		padding-left: 0px;
 	}
 }
-
+///
 p {
 	margin-bottom: 0.75rem;
 }

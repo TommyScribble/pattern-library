@@ -1,15 +1,15 @@
-// --------------------------------------- \\
-//	FOOTER
-// --------------------------------------- \\
+////
+///	ACORDION
+/// @group accordion
+////
 
-// Class to ensure all accordions are closed on page load
-
+/// Class to ensure all accordions are closed on page load
 .js-closed {
 	overflow: hidden;
 	transition: all 0.3s ease-out;
 	height: 0px;
 }
-
+/// Basic styling for the accordion component
 .accordion {
 	width: 100%;
 
@@ -45,7 +45,7 @@
 		}
 	}
 }
-
+/// Basic styling for the button
 .accordion-item__button {
 
 	.icon {

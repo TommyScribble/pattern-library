@@ -1,20 +1,22 @@
-// --------------------------------------- \\
-//	FOOTER
-// --------------------------------------- \\
+////
+///	FOOTER
+/// @group components
+////
 
+///
 .footer {
 	background-color: $dark-grey;
 	padding: 2em;
 	color: $white;
 	text-align: center;
 }
-
+///
 .patterns {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
 }
-
+///
 .main-content {
 	flex: 1;
 }
