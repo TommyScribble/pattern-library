@@ -3,17 +3,17 @@
 /// @group base styles
 ////
 
-/// Base font size
+/// Baseline for all fonts on site
 $basefont-size: 16px;
 
-/// Body styles
+/// Baseline body styles
 body {
 	font-family: $ff-open-sans;
 	font-weight: 300;
 	font-size: $basefont-size;
 	color: $text-color;
 }
-
+///
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
@@ -66,7 +66,7 @@ h6 {
 	margin-bottom: 0.25rem;
 	line-height: 1;
 }
-///
+/// Baseline styliing to enable the sidenav which is fixed at width: 300px on desktop only
 header,
 main,
 footer {
