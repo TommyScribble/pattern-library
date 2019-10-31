@@ -8,10 +8,7 @@ const Header = () => {
 
 	const sideBar = document.getElementsByClassName('side-nav');
 
-	let burgerIcon = currentIcon;
-
 	const openCloseNav = () => {
-		// This needs to trigger a re-render of ther burgerIcon so needs to refacotr a;ll to use react hooks
 		if (sideBar[0].classList.contains('js-open')) {
 			sideBar[0].classList.remove('js-open');
 			sideBar[0].classList.add('js-close');
@@ -24,17 +21,17 @@ const Header = () => {
 	return (
 		<header>
 			<nav className="top-nav">
-				<Heading tagNumber={1} headingText={'React UI library'} />
 				<button
 					className="burger-menu"
 					onClick={() => {
 						openCloseNav();
-						updateIcon(currentIcon === 'Cross1' ? 'Burger1' : 'Cross1');
+						updateIcon(currentIcon => !currentIcon);
 					}}>
-					<Icon iconName={burgerIcon} />
+					<Icon iconName={currentIcon ? 'Burger1' : 'Cross1'} />
 				</button>
+				<SideBar />
 			</nav>
-			<SideBar />
+			<Heading tagNumber={1} headingText={'React UI library'} />
 		</header>
 	);
 };

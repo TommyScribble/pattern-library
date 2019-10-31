@@ -2,9 +2,14 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 
-const Anchor = props => {
-	const { path, anchorClass, disabled, internal, navigation } = props;
-
+const Anchor = ({
+	path,
+	anchorClass,
+	disabled,
+	internal,
+	navigation,
+	children,
+}) => {
 	let buttonAnchor;
 
 	const handleClick = e => {
@@ -20,7 +25,7 @@ const Anchor = props => {
 				className={anchorClass}
 				disabled={disabled}
 				onClick={handleClick}>
-				{props.children}
+				{children}
 			</Link>
 		);
 	} else if (navigation) {
@@ -30,7 +35,7 @@ const Anchor = props => {
 				className={anchorClass}
 				disabled={disabled}
 				onClick={handleClick}>
-				{props.children}
+				{children}
 			</NavLink>
 		);
 	} else {
@@ -40,7 +45,7 @@ const Anchor = props => {
 				className={anchorClass}
 				disabled={disabled}
 				onClick={handleClick}>
-				{props.children}
+				{children}
 			</a>
 		);
 	}

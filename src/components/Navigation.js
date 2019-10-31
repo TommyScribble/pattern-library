@@ -1,7 +1,7 @@
 import React from 'react';
 import Anchor from '../objects/Anchor';
 
-const Navigation = props => {
+const Navigation = () => {
 	return (
 		<React.Fragment>
 			<li className="side-nav__item">
