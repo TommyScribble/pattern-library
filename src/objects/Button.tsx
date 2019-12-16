@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const Button = props => {
+const Button = (props: any) => {
 	const { type, style, btnClass, btnText } = props;
 
 	return (
