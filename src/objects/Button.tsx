@@ -1,12 +1,22 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Button = (props: any) => {
-	const { type, style, btnClass, btnText } = props;
+interface Props {
+	type?: 'submit' | 'reset' | 'button';
+	style?: React.CSSProperties;
+	btnClass?: string;
+	children: any;
+}
 
+const Button: React.FC<Props> = ({
+	type,
+	style,
+	btnClass,
+	children,
+}: Props) => {
 	return (
 		<button type={type} style={style} className={`btn ` + btnClass}>
-			{btnText}
+			{children}
 		</button>
 	);
 };
@@ -18,14 +28,14 @@ Button.defaultProps = {
 		backgroundColor: 'orange',
 	},
 	btnClass: 'btn-primary',
-	btnText: 'Please give me some text',
+	children: 'Please give me some text',
 };
 
 Button.propTypes = {
-	type: propTypes.string,
-	style: propTypes.object,
-	btnClass: propTypes.string,
-	btnText: propTypes.string,
+	type: PropTypes.oneOf(['submit', 'reset', 'button']),
+	style: PropTypes.object,
+	btnClass: PropTypes.string,
+	children: PropTypes.any,
 };
 
 export default Button;
