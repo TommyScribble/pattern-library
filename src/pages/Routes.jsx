@@ -1,19 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import homepage from './homepage';
-import buttons from './buttons';
-import accordion from './accordion';
+import { Router } from '@reach/router';
+
+import Homepage from './homepage';
+import Buttons from './buttons';
+import Accordion from './accordion';
+import NotFound from './notFound';
 
 const Routes = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/buttons" component={buttons} />
-        <Route path="/accordion" component={accordion} />
-        <Route path="/" component={homepage} />
-      </Switch>
-    </Router>
-  );
+	return (
+		<Router>
+			<Homepage path="/" />
+			<Buttons path="/buttons" />
+			<Accordion path="/accordion" />
+			<NotFound default={true} />
+		</Router>
+	);
 };
 
 export default Routes;

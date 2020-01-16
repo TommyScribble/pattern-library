@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-interface Props {
+type Props = {
 	type?: 'submit' | 'reset' | 'button';
 	style?: React.CSSProperties;
 	btnClass?: string;
 	children: any;
-}
+};
 
 const Button: React.FC<Props> = ({
 	type,

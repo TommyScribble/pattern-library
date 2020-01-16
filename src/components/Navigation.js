@@ -5,7 +5,7 @@ const Navigation = props => {
 	return (
 		<React.Fragment>
 			<li className="side-nav__item">
-				<Anchor navigation={true} path={'./'} anchorClass={'side-nav__link'}>
+				<Anchor navigation={true} path={'/'} anchorClass={'side-nav__link'}>
 					Homepage
 				</Anchor>
 			</li>
