@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 
 import NavLink from './NavLink';
@@ -37,11 +37,7 @@ const Anchor: React.FC<Props> = ({
 		);
 	} else if (navigation) {
 		buttonAnchor = (
-			<NavLink
-				to={path}
-				className={anchorClass}
-				disabled={disabled}
-				onClick={handleClick}>
+			<NavLink to={path} className={anchorClass} onClick={handleClick}>
 				{children}
 			</NavLink>
 		);
@@ -57,12 +53,11 @@ const Anchor: React.FC<Props> = ({
 };
 
 Anchor.propTypes = {
-	path: propTypes.string.isRequired,
-	anchorClass: propTypes.string,
-	disabled: propTypes.bool,
-	internal: propTypes.bool,
-	navigation: propTypes.bool,
-	children: propTypes.any,
+	path: PropTypes.string.isRequired,
+	anchorClass: PropTypes.string,
+	internal: PropTypes.bool,
+	navigation: PropTypes.bool,
+	children: PropTypes.any,
 };
 
 export default Anchor;
