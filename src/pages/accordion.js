@@ -8,8 +8,8 @@ const accordion = props => {
 		<PageLayout>
 			<Heading tagNumber={2} headingText={'Accordions'} />
 			<Heading tagNumber={3} headingText={'Single Open'} />
-			<Accordion>
-				<div title={'Alligator Mississippiensis-01'}>
+			<Accordion icon>
+				<div title={'Alligator Mississippiensis-01 - first'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
 					</div>
@@ -21,9 +21,9 @@ const accordion = props => {
 						<strong>Endangered Status:</strong> Currently Not Endangered
 					</div>
 				</div>
-				<div title={'Alligator Sinensis-02'}>
+				<div title={'Alligator Sinensis-02 - second'}>
 					<div>
-						<strong>Common Name:</strong> Chinese Alligator
+						<strong>Common Name:</strong> Chinese Alligator ++
 					</div>
 					<div>
 						<strong>Distribution:</strong> Eastern China
@@ -34,7 +34,7 @@ const accordion = props => {
 				</div>
 			</Accordion>
 			<Heading tagNumber={3} headingText={'Multiple Open'} />
-			<Accordion allowMultipleOpen>
+			{/* <Accordion allowMultipleOpen>
 				<div title={'Alligator Mississippiensis-11'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
@@ -84,7 +84,7 @@ const accordion = props => {
 						<strong>Endangered Status:</strong> Critically Endangered
 					</div>
 				</div>
-			</Accordion>
+			</Accordion> */}
 		</PageLayout>
 	);
 };

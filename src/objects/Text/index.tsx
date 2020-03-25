@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Text: React.FC<Props> = ({ children }: Props) => {
-	return <p>{children}</p>;
+	return <p data-test="component-text">{children}</p>;
 };
 
 Text.propTypes = {

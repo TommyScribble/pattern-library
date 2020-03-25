@@ -3,12 +3,6 @@
 /// @group objects
 ////
 
-/// Class to ensure all accordions are closed on page load
-.js-closed {
-	overflow: hidden;
-	transition: all 0.3s ease-out;
-	height: 0px;
-}
 /// Basic styling for the accordion component
 .accordion {
 	width: 100%;
@@ -31,13 +25,15 @@
 			cursor: pointer;
 			transition: background-color 0.33s ease;
 
-			&.js-open {
+			&.active {
 				background-color: darken($grey-dark, 30%);
 			}
 		}
 
 		&__background {
 			background-color: $grey-light;
+			overflow: hidden;
+			transition: max-height 0.6s ease;
 
 			.content {
 				padding: 1em 1.5em;
@@ -51,6 +47,11 @@
 	.icon {
 		float: right;
 		margin-right: 1em;
+		transition: transform 0.3s ease;
+
+		&.rotate {
+			transform: rotate(180deg);
+		}
 
 		svg {
 			stroke: #FFF;
