@@ -22,7 +22,7 @@ const AccordionItem = props => {
 	return (
 		<li className="accordion-item">
 			<button
-				className={`accordion-item_button ${btnClass} ${isOpen}`}
+				className={`accordion-item__button ${btnClass} ${isOpen}`}
 				onClick={() => handleClick(isOpen)}>
 				{title}
 				{icon && (
