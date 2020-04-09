@@ -33,7 +33,7 @@
 		&__background {
 			background-color: $grey-light;
 			overflow: hidden;
-			transition: max-height 0.6s ease;
+			transition: max-height 0.6s ease-out;
 
 			.content {
 				padding: 1em 1.5em;
@@ -44,14 +44,17 @@
 /// Basic styling for the button
 .accordion-item__button {
 
+	&.active {
+
+		.rotate {
+			transform: rotate(180deg);
+		}
+	}
+
 	.icon {
 		float: right;
 		margin-right: 1em;
 		transition: transform 0.3s ease;
-
-		&.rotate {
-			transform: rotate(180deg);
-		}
 
 		svg {
 			stroke: #FFF;

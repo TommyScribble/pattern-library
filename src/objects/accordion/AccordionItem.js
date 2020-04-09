@@ -1,32 +1,48 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import propTypes from 'prop-types';
 import Icon from 'react-icon-library';
 
 const AccordionItem = props => {
-	const { title, contentClass, icon, btnClass } = props;
+	const {
+		title,
+		children,
+		updateAccordionItems,
+		icon,
+		btnClass,
+		contentClass,
+		isOpen,
+	} = props;
 
 	const accordionRef = useRef(null);
 
-	const [isOpen, setIsOpen] = useState('');
+	const [sectionOpen, setSectionOpen] = useState();
 	const [sectionHeight, setSectionHeight] = useState('0px');
 
-	const handleClick = isOpen => {
-		setIsOpen(isOpen === '' ? 'active' : '');
-		setSectionHeight(
-			isOpen === 'active' ? '0px' : `${accordionRef.current.scrollHeight}px`
-		);
-	};
+	useEffect(() => {
+		setSectionOpen(isOpen);
+	}, [isOpen]);
 
-	const rotateIcon = () => (isOpen === 'active' ? 'rotate' : '');
+	useEffect(() => {
+		setSectionHeight(
+			!sectionOpen ? '0px' : `${accordionRef.current.scrollHeight}px`
+		);
+	}, [sectionOpen]);
+
+	const handleSectionClick = (title, sectionOpen) => {
+		setSectionOpen(() => !sectionOpen);
+		updateAccordionItems(title, !sectionOpen);
+	};
 
 	return (
 		<li className="accordion-item">
 			<button
-				className={`accordion-item__button ${btnClass} ${isOpen}`}
-				onClick={() => handleClick(isOpen)}>
+				className={`accordion-item__button ${btnClass} ${
+					sectionOpen ? 'active' : ''
+				}`}
+				onClick={() => handleSectionClick(title, sectionOpen)}>
 				{title}
 				{icon && (
-					<div className={`icon ${rotateIcon()}`}>
+					<div className={`icon rotate`}>
 						<Icon iconName={'CaretDown2'} />
 					</div>
 				)}
@@ -34,8 +50,8 @@ const AccordionItem = props => {
 			<div
 				ref={accordionRef}
 				style={{ maxHeight: `${sectionHeight}` }}
-				className={`${contentClass} accordion-item__background`}>
-				<div className="content">{props.children}</div>
+				className={`accordion-item__background ${contentClass}`}>
+				<div className="content">{children}</div>
 			</div>
 		</li>
 	);
