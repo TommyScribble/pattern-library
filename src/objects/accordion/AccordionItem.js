@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
 import Icon from 'react-icon-library';
 
 const AccordionItem = props => {
@@ -33,23 +34,27 @@ const AccordionItem = props => {
 		updateAccordionItems(title, !sectionOpen);
 	};
 
+	const activeBtn = sectionOpen ? 'active' : '';
+
+	const activeHeight = {
+		maxHeight: `${sectionHeight}`,
+	}; /* stylelint-disable-line */
+
 	return (
 		<li className="accordion-item">
 			<button
-				className={`accordion-item__button ${btnClass} ${
-					sectionOpen ? 'active' : ''
-				}`}
+				className={`accordion-item__button ${btnClass} ${activeBtn}`}
 				onClick={() => handleSectionClick(title, sectionOpen)}>
 				{title}
 				{icon && (
 					<div className={`icon rotate`}>
-						<Icon iconName={'CaretDown2'} />
+						<Icon iconName={icon} />
 					</div>
 				)}
 			</button>
 			<div
 				ref={accordionRef}
-				style={{ maxHeight: `${sectionHeight}` }}
+				style={activeHeight}
 				className={`accordion-item__background ${contentClass}`}>
 				<div className="content">{children}</div>
 			</div>
@@ -58,11 +63,13 @@ const AccordionItem = props => {
 };
 
 AccordionItem.propTypes = {
-	children: propTypes.instanceOf(Object).isRequired,
-	title: propTypes.string,
-	btnClass: propTypes.string,
-	contentClass: propTypes.string,
-	icon: propTypes.bool,
+	children: PropTypes.instanceOf(Object).isRequired,
+	title: PropTypes.string,
+	btnClass: PropTypes.string,
+	contentClass: PropTypes.string,
+	icon: PropTypes.bool,
+	updateAccordionItems: PropTypes.func,
+	isOpen: PropTypes.bool,
 };
 
 export default AccordionItem;

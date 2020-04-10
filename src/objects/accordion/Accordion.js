@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
 import AccordionItem from './AccordionItem';
 
 const Accordion = props => {
@@ -40,7 +41,6 @@ const Accordion = props => {
 					<AccordionItem
 						key={i}
 						isOpen={accordionItems[child.props.title]}
-						allowMultipleOpen={allowMultipleOpen}
 						title={child.props.title}
 						updateAccordionItems={updateAccordionItems}
 						icon={icon}
@@ -55,9 +55,11 @@ const Accordion = props => {
 };
 
 Accordion.propTypes = {
-	allowMultipleOpen: propTypes.bool,
-	children: propTypes.instanceOf(Object).isRequired,
-	icon: propTypes.bool,
+	allowMultipleOpen: PropTypes.bool,
+	children: PropTypes.instanceOf(Object).isRequired,
+	icon: PropTypes.string,
+	btnClass: PropTypes.string,
+	contentClass: PropTypes.string,
 };
 
 export default Accordion;

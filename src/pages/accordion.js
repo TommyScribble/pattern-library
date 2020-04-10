@@ -8,7 +8,10 @@ const accordion = props => {
 		<PageLayout>
 			<Heading tagNumber={2} headingText={'Accordions'} />
 			<Heading tagNumber={3} headingText={'Single Open'} />
-			<Accordion icon contentClass={'content-class'} btnClass={'button-class'}>
+			<Accordion
+				icon={'CaretDown'}
+				contentClass={'content-class'}
+				btnClass={'button-class'}>
 				<div title={'Alligator Mississippiensis-01'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator
