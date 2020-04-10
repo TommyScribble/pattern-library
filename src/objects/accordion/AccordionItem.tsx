@@ -3,20 +3,28 @@ import PropTypes from 'prop-types';
 
 import Icon from 'react-icon-library';
 
-const AccordionItem = props => {
-	const {
-		title,
-		children,
-		updateAccordionItems,
-		icon,
-		btnClass,
-		contentClass,
-		isOpen,
-	} = props;
+type Props = {
+	title: string;
+	children: any;
+	updateAccordionItems: (title: string, isOpen: boolean) => void;
+	icon?: string;
+	btnClass?: string;
+	contentClass?: string;
+	isOpen: boolean;
+};
 
-	const accordionRef = useRef(null);
+const AccordionItem: React.FC<Props> = ({
+	title,
+	children,
+	updateAccordionItems,
+	icon,
+	btnClass,
+	contentClass,
+	isOpen,
+}: Props) => {
+	const accordionRef = useRef<HTMLElement | null>(null);
 
-	const [sectionOpen, setSectionOpen] = useState();
+	const [sectionOpen, setSectionOpen] = useState(false);
 	const [sectionHeight, setSectionHeight] = useState('0px');
 
 	useEffect(() => {
@@ -24,12 +32,14 @@ const AccordionItem = props => {
 	}, [isOpen]);
 
 	useEffect(() => {
-		setSectionHeight(
-			!sectionOpen ? '0px' : `${accordionRef.current.scrollHeight}px`
-		);
+		if (accordionRef.current !== null) {
+			setSectionHeight(
+				!sectionOpen ? '0px' : `${accordionRef.current.scrollHeight}px`
+			);
+		}
 	}, [sectionOpen]);
 
-	const handleSectionClick = (title, sectionOpen) => {
+	const handleSectionClick = (title: string, sectionOpen: boolean): void => {
 		setSectionOpen(() => !sectionOpen);
 		updateAccordionItems(title, !sectionOpen);
 	};
@@ -64,12 +74,12 @@ const AccordionItem = props => {
 
 AccordionItem.propTypes = {
 	children: PropTypes.instanceOf(Object).isRequired,
-	title: PropTypes.string,
+	title: PropTypes.string.isRequired,
 	btnClass: PropTypes.string,
 	contentClass: PropTypes.string,
-	icon: PropTypes.bool,
-	updateAccordionItems: PropTypes.func,
-	isOpen: PropTypes.bool,
+	icon: PropTypes.string,
+	updateAccordionItems: PropTypes.func.isRequired,
+	isOpen: PropTypes.bool.isRequired,
 };
 
 export default AccordionItem;

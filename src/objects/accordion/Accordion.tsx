@@ -1,17 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 
 import AccordionItem from './AccordionItem';
 
-const Accordion = props => {
-	const { allowMultipleOpen, children, icon, btnClass, contentClass } = props;
+type Props = {
+	allowMultipleOpen?: boolean;
+	children: any;
+	icon?: string;
+	btnClass?: string;
+	contentClass?: string;
+};
 
-	const [accordionItems, setAccordionItems] = useState({});
+type SectionShape = {
+	[fieldName: string]: boolean;
+};
+
+const Accordion: React.FC<Props> = ({
+	allowMultipleOpen,
+	children,
+	icon,
+	btnClass,
+	contentClass,
+}: Props) => {
+	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
 
 	useEffect(() => {
 		const getAllSections = () => {
-			const obj = {};
-			children.forEach(child => {
+			const obj: SectionShape = {};
+			children.forEach((child: any) => {
 				obj[child.props.title] = false;
 			});
 			return obj;
@@ -25,7 +41,7 @@ const Accordion = props => {
 		});
 	};
 
-	const updateAccordionItems = (title, isOpen) => {
+	const updateAccordionItems = (title: string, isOpen: boolean): void => {
 		if (!allowMultipleOpen) closeAllSections();
 		if (isOpen === true)
 			setAccordionItems({
@@ -36,7 +52,7 @@ const Accordion = props => {
 
 	return (
 		<ul className="accordion">
-			{children.map((child, i) => {
+			{children.map((child: any, i: number) => {
 				return (
 					<AccordionItem
 						key={i}
