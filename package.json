@@ -91,12 +91,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
+      "prettier --single-quote --write"
     ],
     "src/styles/**/*.scss": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   },
   "eslintConfig": {
