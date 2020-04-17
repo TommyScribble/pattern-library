@@ -22,7 +22,7 @@ const AccordionItem: React.FC<Props> = ({
 	contentClass,
 	isOpen,
 }: Props) => {
-	const accordionRef = useRef<HTMLElement | null>(null);
+	const accordionRef = useRef<any>();
 
 	const [sectionOpen, setSectionOpen] = useState(false);
 	const [sectionHeight, setSectionHeight] = useState('0px');
@@ -48,7 +48,7 @@ const AccordionItem: React.FC<Props> = ({
 
 	const activeHeight = {
 		maxHeight: `${sectionHeight}`,
-	}; /* stylelint-disable-line */
+	};
 
 	return (
 		<li className="accordion-item">

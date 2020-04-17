@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AccordionItem from './AccordionItem';
@@ -12,7 +12,7 @@ type Props = {
 };
 
 type SectionShape = {
-	[fieldName: string]: boolean;
+	[key: string]: boolean;
 };
 
 const Accordion: React.FC<Props> = ({

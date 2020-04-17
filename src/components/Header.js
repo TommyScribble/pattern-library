@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Heading from '../objects/Heading';
 import SideBar from './SideBar';
-import Icon from 'react-icon-library';
+// import Icon from 'react-icon-library';
 
 const Header = () => {
 	let [currentIcon, updateIcon] = useState('Burger1');
@@ -31,7 +31,7 @@ const Header = () => {
 						openCloseNav();
 						updateIcon(currentIcon === 'Cross1' ? 'Burger1' : 'Cross1');
 					}}>
-					<Icon iconName={burgerIcon} />
+					{/* <Icon iconName={burgerIcon} /> */}
 				</button>
 			</nav>
 			<SideBar />

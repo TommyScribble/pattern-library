@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
-import Accordion from '../objects/accordion/Accordion';
+import Accordion from '../objects/Accordion/Accordion';
 import Heading from '../objects/Heading';
 
 const accordion = props => {
@@ -9,7 +9,7 @@ const accordion = props => {
 			<Heading tagNumber={2} headingText={'Accordions'} />
 			<Heading tagNumber={3} headingText={'Single Open'} />
 			<Accordion
-				icon={'CaretDown'}
+				icon={'CaretUp'}
 				contentClass={'content-class'}
 				btnClass={'button-class'}>
 				<div title={'Alligator Mississippiensis-01'}>
