@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import myLogo from '../assets/scribble_logo--white.png';
-import Logo from './../objects/Logo';
+import Logo from '../objects/Logo';
 import Navigation from './Navigation';
 
-const SideBar = ({ active }) => {
+type Props = {
+	active?: string | boolean;
+};
+
+const SideBar = ({ active }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
@@ -23,6 +29,10 @@ const SideBar = ({ active }) => {
 			<Navigation />
 		</ul>
 	);
+};
+
+SideBar.propTypes = {
+	active: PropTypes.string || PropTypes.bool,
 };
 
 export default SideBar;
