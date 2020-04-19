@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AccordionItem from './AccordionItem';
-
+//TODO: add functionlity to choose initally open section + fisisOpen eRror...
 type Props = {
 	allowMultipleOpen?: boolean;
 	children: any;

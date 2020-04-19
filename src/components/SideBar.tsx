@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import myLogo from '../assets/scribble_logo--white.png';
 import Logo from '../objects/Logo';
 import Navigation from './Navigation';
 
@@ -11,6 +10,8 @@ type Props = {
 
 const SideBar = ({ active }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	const myLogo = './scribble_logo--white.png';
 
 	useEffect(() => {
 		setIsOpen(active === 'Burger1' ? false : true);

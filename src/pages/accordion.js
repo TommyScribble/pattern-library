@@ -9,6 +9,7 @@ const accordion = props => {
 			<Heading tagNumber={2} headingText={'Accordions'} />
 			<Heading tagNumber={3} headingText={'Single Open'} />
 			<Accordion
+				isOpen={false}
 				icon={'CaretUp'}
 				contentClass={'content-class'}
 				btnClass={'button-class'}>
@@ -36,7 +37,7 @@ const accordion = props => {
 					</div>
 				</div>
 			</Accordion>
-			<Heading tagNumber={3} headingText={'Multiple Open'} />
+			<Heading tagNumber={3} headingText={'Multiple Open'} isOpen={false} />
 			<Accordion allowMultipleOpen>
 				<div title={'Alligator Mississippiensis-11'}>
 					<div>

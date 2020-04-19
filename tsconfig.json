@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+	"outDir": "./dist",
+    "target": "es5",
     "module": "es6",
     "strict": true,
 	"jsx": "react",
@@ -9,7 +10,10 @@
 	"esModuleInterop": true,
 	"moduleResolution": "node",
 	"allowSyntheticDefaultImports": true,
-	"resolveJsonModule": true
+	"resolveJsonModule": true,
+	"allowJs": true,
+	"noImplicitAny": true,
+	"sourceMap": true
   },
   "include": [
 	"src/**/*"

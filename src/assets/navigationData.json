@@ -1,0 +1,47 @@
+[
+	{
+		"title": "Homepage",
+		"path": "/",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Buttons",
+		"path": "/buttons",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Accordion",
+		"path": "/accordion",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Text",
+		"path": "/text",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Icons",
+		"path": "/icons",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Progress Bar",
+		"path": "/progress-bar",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Spinner",
+		"path": "/spinner",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Tooltip",
+		"path": "/tooltip",
+		"anchorClass": "side-nav__link"
+	},
+	{
+		"title": "Checkbox",
+		"path": "/checkbox",
+		"anchorClass": "side-nav__link"
+	}
+]
