@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Anchor from '../objects/Anchor';
-import NavData from '../assets/navigationData.json';
+import Anchor from '../Atoms/Anchor';
+import NavData from '../../assets/navigationData.json';
 
 type Data = {
 	title: string;

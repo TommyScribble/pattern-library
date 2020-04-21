@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Logo from '../objects/Logo';
+import Logo from '../Atoms/Logo';
 import Navigation from './Navigation';
 
 type Props = {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Heading from '../objects/Heading';
+
+import Heading from '../Atoms/Heading';
 import SideBar from './SideBar';
 import Icon from 'react-icon-library';
 

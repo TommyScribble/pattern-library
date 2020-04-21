@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
-import Text from '../objects/Text';
-import Button from '../objects/Button';
+import PageLayout from '../components/Objects/PageLayout';
+import Text from '../components/Atoms/Text';
+import Button from '../components/Atoms/Button';
 
 const buttons = props => {
 	return (

@@ -1,0 +1,21 @@
+{
+	"Heading": "This pattern library is currently still under construction",
+	"Text": [
+		"Navigate using the sidebar to the element you would like to use to find out more",
+		"To get involved use one of the links below"
+	],
+	"Links": [
+		{
+			"path": "/buttons",
+			"class": "button",
+			"internal": true,
+			"text": "Get Started"
+		},
+		{
+			"path": "https://github.com/TommyScribble/pattern-library",
+			"class": "button",
+			"internal": false,
+			"text": "View Git repo"
+		}
+	]
+}

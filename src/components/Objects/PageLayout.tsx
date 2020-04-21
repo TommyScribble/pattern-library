@@ -3,7 +3,7 @@ import Header from './Header';
 // import Footer from './Footer';
 
 type Props = {
-	children: React.ReactElement;
+	children: JSX.Element[];
 };
 
 const PageLayout = ({ children }: Props) => {
