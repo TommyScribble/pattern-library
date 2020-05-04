@@ -8,13 +8,13 @@
 		{
 			"path": "/buttons",
 			"class": "button",
-			"internal": true,
+			"linkType": "internal",
 			"text": "Get Started"
 		},
 		{
 			"path": "https://github.com/TommyScribble/pattern-library",
 			"class": "button",
-			"internal": false,
+			"linkType": "external",
 			"text": "View Git repo"
 		}
 	]

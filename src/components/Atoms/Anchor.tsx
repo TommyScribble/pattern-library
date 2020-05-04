@@ -8,8 +8,7 @@ type Props = {
 	path: string;
 	anchorClass?: string;
 	disabled?: boolean;
-	internal?: boolean;
-	navigation?: boolean;
+	linkType?: string;
 	children?: any;
 };
 
@@ -17,8 +16,7 @@ const Anchor: React.FC<Props> = ({
 	path,
 	anchorClass,
 	disabled,
-	internal,
-	navigation,
+	linkType,
 	children,
 }: Props) => {
 	let buttonAnchor;
@@ -29,24 +27,27 @@ const Anchor: React.FC<Props> = ({
 		}
 	};
 
-	if (internal) {
-		buttonAnchor = (
-			<Link to={path} className={anchorClass} onClick={handleClick}>
-				{children}
-			</Link>
-		);
-	} else if (navigation) {
-		buttonAnchor = (
-			<NavLink to={path} className={anchorClass} onClick={handleClick}>
-				{children}
-			</NavLink>
-		);
-	} else {
-		buttonAnchor = (
-			<a href={path} className={anchorClass} onClick={handleClick}>
-				{children}
-			</a>
-		);
+	switch (linkType) {
+		case 'internal':
+			buttonAnchor = (
+				<Link to={path} className={anchorClass} onClick={handleClick}>
+					{children}
+				</Link>
+			);
+			break;
+		case 'navigation':
+			buttonAnchor = (
+				<NavLink to={path} className={anchorClass} onClick={handleClick}>
+					{children}
+				</NavLink>
+			);
+			break;
+		default:
+			buttonAnchor = (
+				<a href={path} className={anchorClass} onClick={handleClick}>
+					{children}
+				</a>
+			);
 	}
 
 	return buttonAnchor;
@@ -55,8 +56,7 @@ const Anchor: React.FC<Props> = ({
 Anchor.propTypes = {
 	path: PropTypes.string.isRequired,
 	anchorClass: PropTypes.string,
-	internal: PropTypes.bool,
-	navigation: PropTypes.bool,
+	linkType: PropTypes.string,
 	children: PropTypes.any,
 };
 

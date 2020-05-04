@@ -10,7 +10,7 @@ type Data = {
 	Links: {
 		path: string;
 		class: string;
-		internal: boolean;
+		linkType: string;
 		text: string;
 	}[];
 };

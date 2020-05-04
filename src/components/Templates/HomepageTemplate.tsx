@@ -8,7 +8,7 @@ import Anchor from '../Atoms/Anchor';
 type Links = {
 	path: string;
 	class: string;
-	internal: boolean;
+	linkType: string;
 	text: string;
 };
 
@@ -25,7 +25,7 @@ const HomepageTemplate = ({ content }: any) => {
 						key={i}
 						path={link.path}
 						anchorClass={link.class}
-						internal={link.internal}>
+						linkType={link.linkType}>
 						{link.text}
 					</Anchor>
 				);
