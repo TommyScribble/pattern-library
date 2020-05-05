@@ -14,7 +14,7 @@ const Navigation: any = () =>
 		return (
 			<li key={i} className="side-nav__item">
 				<Anchor
-					linkType={'internal'}
+					linkType="navigation"
 					path={item.path}
 					anchorClass={item.anchorClass}>
 					{item.title}

@@ -1,25 +1,30 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link, useLocation } from '@reach/router';
 import PropTypes from 'prop-types';
 
-const NavLink = (props: any) => (
-	<Link
-		{...props}
-		getProps={({ isCurrent }) => {
-			return {
-				style: {
-					backgroundColor: isCurrent ? 'rgba(166, 0, 22, 0.4)' : '#E20016',
-				},
-			};
-		}}
-	/>
-);
+type Props = {
+	to: string;
+	className?: string;
+	onClick?: any;
+	children: any;
+};
+
+const NavLink = ({ to, className, onClick, children }: Props) => {
+	const location = useLocation();
+	if (location.pathname === to) className = `${className} current`;
+
+	return (
+		<Link to={to} onClick={onClick} className={className}>
+			{children}
+		</Link>
+	);
+};
 
 NavLink.propTypes = {
-	to: PropTypes.string,
+	to: PropTypes.string.isRequired,
 	className: PropTypes.string,
-	children: PropTypes.any,
 	onClick: PropTypes.func,
+	children: PropTypes.any.isRequired,
 };
 
 export default NavLink;
