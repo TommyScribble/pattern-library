@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
-	"build": "node scripts/build.js && sassdoc 'src/styles/**/*.*'",
-	"build-tsc": "tsc && sassdoc 'src/styles/**/*.*'",
+    "build": "node scripts/build.js && sassdoc 'src/styles/**/*.*'",
+    "build-tsc": "tsc && sassdoc 'src/styles/**/*.*'",
     "analyse": "source-map-explorer 'build/static/js/*.js",
     "test": "node scripts/test.js"
   },
